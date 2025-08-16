@@ -32,7 +32,7 @@ function createHouse() {
     // roof
     const roofGeometry = new THREE.ConeGeometry(1.8, 1, 4);
     const roofMaterial = new THREE.MeshPhongMaterial({ 
-        color: 0xff4444,
+        color: 0xDB7093,
         wireframe: false
     });
     const roof = new THREE.Mesh(roofGeometry, roofMaterial);
@@ -118,6 +118,42 @@ document.addEventListener('mousemove', (e) => {
     };
 });
 
+document.addEventListener('keydown', (e) => {
+    const key = e.key.toLowerCase();
+    const moveSpeed = 0.3;
+    const zoomSpeed = 0.3;
+
+    switch(key) {
+        case 'w':
+            camera.position.y += moveSpeed;
+            break;
+        case 's':
+            camera.position.y -= moveSpeed;
+            break;
+        case 'a':
+            house.houseGroup.rotation.y += moveSpeed;
+            break;
+        case 'd':
+            house.houseGroup.rotation.y -= moveSpeed;
+            break;
+        case 'z':
+            camera.position.z -= zoomSpeed;
+            break;
+        case 'x':
+            camera.position.z += zoomSpeed;
+            break;
+    }
+
+    // min/max zoom limit
+    camera.position.z = Math.min(Math.max(camera.position.z, 3), 10);
+    
+    // height limit
+    camera.position.y = Math.min(Math.max(camera.position.y, -2), 5);
+    
+    // scene update
+    renderer.render(scene, camera);
+});
+
 document.addEventListener('mouseup', () => {
     isDragging = false;
 });
@@ -169,7 +205,6 @@ document.getElementById('reset-view').addEventListener('click', () => {
     camera.position.set(0, 0, 5);
 });
 
-// slow spin animation
 function animate() {
     requestAnimationFrame(animate);
     
