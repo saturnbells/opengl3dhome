@@ -1,4 +1,4 @@
-pt-br :brazil:
+pt-br `:brazil:`
 
 Saudações professor, nesse repositório estão os arquivos relacionados a atividade do PDF enviado no nosso grupo de whatsapp do curso "Programação de Software básico em C".
 
@@ -6,7 +6,7 @@ Realizei as demandas da atividade (Como desenhar um triângulo / pirâmide azul 
 
 adicionei comandos de teclado [movimentação de câmera usando "WASD" e profundidade com "ZX"] e por fim, realizei a renderização da casa em "OpenGL")
 
-en-us :us:
+en-us `:us:`
 
 Greetings, teacher, this repository contains the files related to the PDF activity shared in our WhatsApp group for the "Basic Software Programming in C" course.
 
