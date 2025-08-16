@@ -36,15 +36,15 @@ function createHouse() {
         wireframe: false
     });
     const roof = new THREE.Mesh(roofGeometry, roofMaterial);
-    roof.rotation.y = Math.PI / 4; // Rotacionar para parecer um telhado
-    roof.position.y = 1.5 + 0.5; // Posicionar acima das paredes
+    roof.rotation.y = Math.PI / 4;
+    roof.position.y = 1.5 + 0.5;
     houseGroup.add(roof);
     
     // door
     const doorGeometry = new THREE.BoxGeometry(0.5, 0.8, 0.1);
     const doorMaterial = new THREE.MeshPhongMaterial({ color: 0x8B4513 });
     const door = new THREE.Mesh(doorGeometry, doorMaterial);
-    door.position.set(0, 0.35, 1.01); // Frente da casa
+    door.position.set(0, 0.35, 1.01);
     houseGroup.add(door);
     
     // windows
@@ -86,7 +86,7 @@ let previousMousePosition = {
     y: 0
 };
 
-// mouose rotation
+// mouse rotation
 document.addEventListener('mousedown', (e) => {
     isDragging = true;
 });
