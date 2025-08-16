@@ -133,8 +133,8 @@ function toRadians(angle) {
 }
 
 // custom colors
-document.getElementById('roof-red').addEventListener('click', () => {
-    house.roof.material.color.set(0xff4444);
+document.getElementById('roof-pink').addEventListener('click', () => {
+    house.roof.material.color.set(0xDB7093);
 });
 
 document.getElementById('roof-blue').addEventListener('click', () => {
@@ -172,8 +172,6 @@ document.getElementById('reset-view').addEventListener('click', () => {
 // slow spin animation
 function animate() {
     requestAnimationFrame(animate);
-
-    house.houseGroup.rotation.y += 0.003;
     
     renderer.render(scene, camera);
 }
