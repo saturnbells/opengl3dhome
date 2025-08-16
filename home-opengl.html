@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenGL home</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./baturno_website_icon.png">
+
+</head>
+<body>
+
+    <div id="container"></div>
+    
+    <div id="controls">
+        <h3>controls:</h3>
+        <p>• right/left mouse to move home</p>
+        <p>• use mouse scroll to zoom in / out</p>
+        
+        <h3>colors:</h3>
+        <div>
+            <button id="roof-red" class="color-btn" style="background: #ff4444;"></button>
+            <button id="roof-blue" class="color-btn" style="background: #4444ff;"></button>
+            <button id="roof-green" class="color-btn" style="background: #44ff44;"></button>
+            roof
+        </div>
+        
+        <div>
+            <button id="wall-beige" class="color-btn" style="background: #e0b090;"></button>
+            <button id="wall-gray" class="color-btn" style="background: #b0b0b0;"></button>
+            <button id="wall-yellow" class="color-btn" style="background: #ffff80;"></button>
+            walls
+        </div>
+        
+        <h3>view configs:</h3>
+        <button id="toggle-wireframe">wireframe mode</button>
+        <button id="reset-view">reset view</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="threejs.js"></script>
+
+</body>
+</html>
